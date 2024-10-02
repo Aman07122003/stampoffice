@@ -39,12 +39,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Toggle */}
       {isOpen && (
-        <div className='absolute top-24 left-0 font-normal text-sm w-full bg-[#edac66] flex flex-col items-center md:hidden'>
+        <div className='absolute top-24 left-0 font-normal text-sm w-11/12 justify-center shadow-lg ml-3 rounded-lg bg-[#f4cb9f] flex flex-col items-center md:hidden'>
           <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Home</ul>
           <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Product</ul>
           <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>News</ul>
           <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Account</ul>
-          <div className='p-4 cursor-pointer w-full text-center justify-center items-center border-b border-black'><button className='h-8 text- w-24 rounded-xl bg-red-700 text-yellow-300'>
+          <div className='p-4 cursor-pointer w-full text-center justify-center items-center'><button className='h-8 text- w-24 rounded-xl bg-red-700 text-yellow-300'>
             Premium
           </button></div>
         </div>
