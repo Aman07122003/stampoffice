@@ -15,36 +15,36 @@ const Navbar = () => {
   };
 
   return (
-    <div className='h-24 w-full flex justify-between items-center font-bold bg-[#edac66] text-lg p-2'>
+    <div className='h-16 w-full flex justify-between items-center font-bold bg-[#edac66] text-lg p-2'>
       <div className='flex gap-2 ml-3 w-1/5'>
-        <Image src={Logo} alt="StampNation Logo" className='h-20 w-24' />
-        <h1 className='items-center flex text-2xl text-amber-950 font-extrabold font-mono'>StampNation</h1>
+        <Image src={Logo} alt="StampNation Logo" className='h-16 w-20' />
+        <h1 className='items-center flex text-lg text-amber-950 font-extrabold font-mono'>StampNation</h1>
       </div>
 
       {/* Hamburger Icon for Mobile */}
       <div className='md:hidden flex items-center mr-5' onClick={toggleMenu}>
-        <GiHamburgerMenu className='text-3xl cursor-pointer' />
+        <GiHamburgerMenu className='text-xl cursor-pointer' />
       </div>
 
       {/* Menu Items */}
-      <div className={`flex justify-between items-center w-3/6 mr-5 font-bold hidden md:block text-xl ${isOpen ? 'hidden' : 'flex-col'} md:flex md:flex-row`}>
+      <div className={`flex justify-between items-center w-3/6 mr-5 font-bold hidden md:block ${isOpen ? 'hidden' : 'flex-col'} md:flex md:flex-row`}>
         <ul className='cursor-pointer'>Home</ul>
         <ul className='cursor-pointer'>Product</ul>
         <ul className='cursor-pointer'>News</ul>
         <ul className='cursor-pointer'>Account</ul>
-        <button className='h-12 text-xl w-32 rounded-xl bg-red-600 text-yellow-200 flex items-center justify-center shadow-xl'>
+        <button className='h-10 w-28 rounded-xl bg-red-600 text-yellow-200 flex items-center justify-center shadow-xl'>
           Premium
         </button>
       </div>
 
       {/* Mobile Menu Toggle */}
       {isOpen && (
-        <div className='absolute top-24 left-0 w-full bg-[#edac66] flex flex-col items-center md:hidden'>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-gray-300'>Home</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-gray-300'>Product</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-gray-300'>News</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-gray-300'>Account</ul>
-          <div className='p-4 cursor-pointer w-full text-center justify-center items-center border-b border-gray-300'><button className='h-12 text-xl w-32 rounded-xl bg-red-700 text-yellow-300'>
+        <div className='absolute top-24 left-0 font-normal text-sm w-full bg-[#edac66] flex flex-col items-center md:hidden'>
+          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Home</ul>
+          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Product</ul>
+          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>News</ul>
+          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Account</ul>
+          <div className='p-4 cursor-pointer w-full text-center justify-center items-center border-b border-black'><button className='h-8 text- w-24 rounded-xl bg-red-700 text-yellow-300'>
             Premium
           </button></div>
         </div>
