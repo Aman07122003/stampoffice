@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from '../app/images/Logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi'; // Import hamburger icon from react-icons
+import Link from 'next/link';
 
 const Navbar = () => {
   // State to manage the mobile menu visibility
@@ -31,7 +32,8 @@ const Navbar = () => {
         <ul className='cursor-pointer'>Home</ul>
         <ul className='cursor-pointer'>Product</ul>
         <ul className='cursor-pointer'>News</ul>
-        <ul className='cursor-pointer'>Account</ul>
+        <ul className='cursor-pointer'><Link href="/account">Account</Link>
+        </ul>
         <button className='h-10 w-28 rounded-xl bg-red-600 text-yellow-200 flex items-center justify-center shadow-xl'>
           Premium
         </button>
@@ -40,13 +42,16 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       {isOpen && (
         <div className='absolute top-24 left-0 font-normal text-sm w-11/12 justify-center shadow-lg ml-3 rounded-lg bg-[#f4cb9f] flex flex-col items-center md:hidden'>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Home</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Product</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>News</ul>
-          <ul className='p-4 cursor-pointer w-full text-center border-b border-black'>Account</ul>
-          <div className='p-4 cursor-pointer w-full text-center justify-center items-center'><button className='h-8 text- w-24 rounded-xl bg-red-700 text-yellow-300'>
-            Premium
-          </button></div>
+          <ul>
+              <li className='p-4 cursor-pointer w-full text-center border-b border-black'>Home</li>
+              <li className='p-4 cursor-pointer w-full text-center border-b border-black'>Product</li>
+              <li className='p-4 cursor-pointer w-full text-center border-b border-black'>News</li>
+              <li className='p-4 cursor-pointer w-full text-center border-b border-black'><Link href="/account">Account</Link>
+              </li>
+              <div className='p-4 cursor-pointer w-full text-center justify-center items-center'><button className='h-8 text- w-24 rounded-xl bg-red-700 text-yellow-300'>
+                Premium
+              </button></div>
+          </ul>
         </div>
       )}
     </div>
