@@ -13,7 +13,7 @@ const Page = () => {
            <button className='shadow-xl h-10 text-lg w-56  rounded-xl bg-red-700 text-yellow-300 flex items-center justify-center font-bold '>Join the Community</button>
         </div>
       </div>
-      <div className='h-1/2 md:w-96 w-60 md:order-2 order-1 md:mr-10 mt-16 md:mt-2 flex justify-satar items-center'>
+      <div className='h-1/2 md:w-96 w-60 md:order-2 order-1 md:mr-10 mt-10 md:mt-2 flex justify-satar items-center'>
         <Image src={Hero} alt="Hero Image" className='object-contain' />
       </div>
     </div>
